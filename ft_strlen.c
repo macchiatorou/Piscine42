@@ -1,20 +1,20 @@
+#include <unistd.h>
 #include <stdio.h>
 
 int ft_strlen(char *str)
 {
-    int i;
-
-    i = 0;
-    while (str[i] != '\0')
+    int i = 0; // Initialize counter to 0 
+    while(str[i] != '\0') // Loop until null terminator is encountered 
     {
-        i++;
+        i++; // Increment the counter 
     }
-    return (i);
+
+    return i;
 }
 
-int main()
+int main(void)
 {
-    char str[] = "hello";
-    int i = ft_strlen(str);
-    printf("%d", i);
+    char *str = "hello";
+    ft_strlen(str);
+    printf("Length of the string: %d\n", str);
 }
